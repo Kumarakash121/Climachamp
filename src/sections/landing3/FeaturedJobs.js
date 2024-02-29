@@ -92,7 +92,7 @@ const FeaturedJobs = () => {
                 <div className="media align-items-center">
                   <div className="square-52 bg-indigo mr-8 rounded">
                     <Link to="/#">
-                      <img src={imgF2} alt="" />
+                      <img src={imgF3} alt="" />
                     </Link>
                   </div>
                   <div>
