@@ -1,0 +1,91 @@
+.steps-container {
+    overflow: hidden;
+    margin: 10px;
+    padding: 0px;
+    white-space: nowrap;
+    width: 100%;
+    /* counter-reset: steps; */
+  }
+  .steps {
+    position: relative;
+    display: inline-block;
+    left: -28px; 
+    height: 50px;
+    /* line-height: 50px; */
+    margin-left: 0px;
+    margin-right: 10px;
+    /* counter-increment: steps; */
+    cursor: pointer;
+    transition: background 1s;
+    min-height: 30px;
+    color: black;
+  }
+  
+  .steps:after,
+  .steps:before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    background: #e6ffe6;
+  }
+  
+  .steps:before {
+    transform: skew(45deg);
+    top: 0px;
+    border-bottom: none;
+    transform-origin: top left;
+  }
+  
+  .steps:after {
+    transform: skew(-45deg);
+    bottom: 0px;
+    border-top: none;
+    transform-origin: bottom left;
+  }
+  
+  .steps span{
+    /* display: block; */
+    padding-left: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 75%;
+    vertical-align: middle;
+    padding-top: 3px;
+    position: relative;
+  }
+  
+  .steps span:before{
+    /* content: counter(steps) ". "; */
+  }
+  .steps.active:before,
+.steps.active:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: #afde5f;
+  
+   /* Move the background behind the text */
+}
+.steps.active:before {
+   
+    border-bottom: none;
+    bottom: -1px; /* Adjust this value as needed to minimize the gap */
+  }
+  
+  .steps.active:after {
+   
+    border-top: none;
+    
+  }
+.steps.active span {
+  font-weight: bold;
+  position: relative; /* Ensure the text is positioned above the background */
+  z-index: 1; /* Set the text above the background */
+}
+  
+  
