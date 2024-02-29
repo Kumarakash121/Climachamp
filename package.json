@@ -62,6 +62,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "prettier": "^1.17.0"
   }
 }
